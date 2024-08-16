@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "apis": [
+    {
+      "identifier": "instaleaptechdocs",
+      "source": "@instaleaptechdocs/v2.2#12msctzlqedzqk8",
+      "integrity": "sha512-SPYWFWgypgR2IRmSJRUXnPPGih6l6hlSQxt/M/xEZ7sdzL66QOMrHfDECzA5viv7pMXR2fqWroXVa2tIvkZWzA==",
+      "installerVersion": "6.1.2"
+    }
+  ]
+}

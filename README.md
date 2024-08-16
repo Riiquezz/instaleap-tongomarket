@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# TongoMart Instaleap Integration
+This project demonstrates the integration of TongoMart's e-commerce platform with the Instaleap logistics platform. The integration involves checking delivery availability, creating orders, and processing billing information.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project Overview
+TongoMart, a supermarket in Uganda, has signed a contract with Instaleap to improve their logistics and delivery operations. This project implements the following key features:
 
-## Available Scripts
+1. Checking Delivery Availability: Users can check available delivery time slots.
+2. Order Creation: Users can select a time slot and create an order.
+3. Billing Process: Users can process billing information after an order is created.
 
-In the project directory, you can run:
+# Features
+- UI Introduction Screen: A starting screen with a button to begin checking delivery availability.
+- Availability Check: Initially mocks time slots, then proceeds with a real API request.
+- Order Creation: Creates an order using the selected time slot and displays the order details.
+- Billing: Allows users to process billing information, initially mocking the response, then sending real data to the Instaleap API.
 
-### `npm start`
+# Installation
+## Clone the repository:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```git clone https://github.com/yourusername/tongomart-instaleap-integration.git```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Navigate to the project directory:
 
-### `npm test`
+```cd tongomart-instaleap-integration```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Install dependencies:
 
-### `npm run build`
+```npm install```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Start the development server:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```npm start```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Usage
+## Check Availability:
 
-### `npm run eject`
+- Start the application.
+- Click "Check Availability" to view mocked delivery time slots.
+- Select a time slot to proceed to the order creation screen.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Create an Order:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- After selecting a time slot, click "Create Order" to create an order using the selected slot.
+- The order details will be displayed after creation.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Proceed to Billing:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Click "Proceed to Billing" to enter the billing process.
+- Click "Process Billing" to complete the billing step.
 
-## Learn More
+# API Integration
+This project integrates with the Instaleap API for the following operations:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Checking Availability: /jobs/availability/v2
+- Creating an Order: /jobs
+- Processing Billing: /jobs/{jobId}/payment_info
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+All API requests use a temporary API key provided by Instaleap
 
-### Code Splitting
+# Technical Details
+- React: The project is built using React and manages state with React hooks.
+- Axios: Axios is used for making API requests to the Instaleap platform.
+- Mocking: The project initially uses mocked data for time slots and order creation, transitioning to real API requests after the first interaction.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Troubleshooting
+If you encounter issues with the API requests or the integration:
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Ensure that the API key is valid and correctly included in the headers.
+- Verify that all required fields in the API payload are correctly populated with valid data.
+- Check the browser console for any error messages and investigate accordingly.
